@@ -1,17 +1,153 @@
+/* 🌌 General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #121212;
     color: #fff;
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
+/* 📌 Header Bar */
 header {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    align-items: center;
+    padding: 15px 20px;
     background: #1e1e1e;
+    border-bottom: 2px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffcc00;
+}
+
+#uploadBtn {
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#uploadBtn:hover {
+    background: #ff784e;
+}
+
+/* 🖼️ Feed Layout (Masonry Grid Like Pinterest) */
 #feed {
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* 📸 Post Styling */
+.post {
+    background: #222;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* 🖼️ Image Styles */
+.post img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.post img:hover {
+    filter: brightness(1.1);
+}
+
+/* 📝 Caption */
+.post-caption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ddd;
+    font-style: italic;
+}
+
+/* ❤️ Like Button */
+.likeBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.likeBtn i {
+    color: #888;
+}
+
+.likeBtn.liked i {
+    color: #ff3b3b;
+    animation: heartBeat 0.4s ease-in-out;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* 💬 Comment Section */
+.comments-section {
+    margin-top: 10px;
+    padding: 10px;
+    background: #181818;
+    border-radius: 8px;
+}
+
+.comment-input {
+    width: 80%;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background: #333;
+    color: #fff;
+}
+
+.submit-comment {
+    background: #2196F3;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-comment:hover {
+    background: #42a5f5;
+}
+
+/* 🗨️ Comments List */
+.comments-list {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.comment {
+    padding: 5px;
+    border-bottom: 1px solid #333;
+    color: #bbb;
 }
