@@ -3,20 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roamzyee - Travel Sharing Platform</title>
+    <title>Roamzyee - Explore the World</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!-- 🔹 Navigation Bar -->
     <header>
-        <h1>Roamzyee</h1>
-        <button id="uploadBtn">Upload Post</button>
+        <div class="logo">🌍 Roamzyee</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search destinations...">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="nav-icons">
+            <i class="fas fa-user-circle"></i>
+        </div>
     </header>
 
-    <section id="feed">
+    <!-- 🔹 Upload Button (Floating) -->
+    <button id="uploadBtn" class="upload-fab">
+        <i class="fas fa-plus"></i>
+    </button>
+
+    <!-- 🔹 Social Feed (Masonry Grid) -->
+    <section id="feed" class="masonry-grid">
         <!-- Posts will be dynamically added here -->
     </section>
 
+    <!-- 🔹 Scripts -->
     <script src="scripts/app.js"></script>
     <script src="scripts/cloudinary.js"></script>
+
 </body>
 </html>
